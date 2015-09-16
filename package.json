@@ -1,0 +1,33 @@
+{
+  "name": "ggview",
+  "version": "0.0.0",
+  "description": "Git revision graph viewer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cwahbong/ggview.git"
+  },
+  "keywords": [
+    "git",
+    "log",
+    "branch",
+    "revision",
+    "graph"
+  ],
+  "author": "Ahbong Chang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cwahbong/ggview/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "socket.io": "~1.3.6",
+    "nodegit": "~0.4.1"
+  },
+  "devDependencies": {
+    "eslint": "~1.4.3"
+  }
+}

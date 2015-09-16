@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ggview</title>
+  <script src="http://localhost:5678/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io("http://localhost:5678/git");
+    socket
+      .on("connected", function() {
+          socket.emit("revision", "<PATH_TO_TEST_REPO>");
+      })
+      .on("commit", function(commit) {
+        console.log("commit", commit);
+      })
+      .on("end", function() {
+        console.info("end");
+      });
+  </script>
+</head>
+<body>
+
+</body>
+</html>
