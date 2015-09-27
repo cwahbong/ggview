@@ -25,7 +25,7 @@ io
           return repository.getMasterCommit();
         })
         .then(function(rootCommit) {
-          var walker = rootCommit.history();
+          var walker = rootCommit.history(nodegit.Revwalk.SORT.TOPOLOGICAL);
           walker
             .on("commit", function(commit) {
               console.log("commit", commit.sha());
