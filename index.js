@@ -16,8 +16,8 @@ io
   .of("git")
   .on("connection", function (socket) {
     console.log("connected");
-    socket.emit("connected");
     socket.on("revision", function (repo_path) {
+      console.log(repo_path);
       nodegit.Repository
         .open(repo_path)
         .then(function(repository) {
@@ -44,6 +44,7 @@ io
         })
         .catch(function(error) {
           console.error(error);
+          socket.disconnect();
         });
     });
   });
