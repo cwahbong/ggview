@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>ggview</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-  <script src="http://localhost:5678/socket.io/socket.io.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="http://localhost:5678/socket.io/socket.io.js"></script> -->
   <style>
 circle {
   stroke: black;
@@ -27,7 +27,7 @@ text {
     Repository path: <input type="text" id="repo_path" />
   </p>
   <p>
-    <a class="submit" href="javascript:ggview.start('http://localhost:5678/git', document.getElementById('repo_path').value)">Go!</a>
+    <a id="start" class="submit" href="#">Go!</a>
   </p>
 </form>
 
@@ -36,7 +36,7 @@ text {
   </svg>
 </div>
 
-<script src="scripts/main.js"></script>
+<script src="scripts/ggview.js"></script>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ var nodegit = require("nodegit");
 var socketio = require("socket.io");
 
 var app = express();
-app.use(express.static(__dirname + "/static"));
+app.use(express.static(__dirname + "/build/static"));
 
 var server = http.Server(app);
 server.listen(5678);
